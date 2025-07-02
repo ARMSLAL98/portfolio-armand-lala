@@ -87,7 +87,7 @@ body {
 
 
 .container {
-  background: #fff;
+  background: rgba(255,255,255,0.70); /* 0.70 è la trasparenza, puoi cambiare! */
   border-radius: 18px;
   padding: 32px;
   margin-bottom: 36px;
