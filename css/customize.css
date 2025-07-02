@@ -149,17 +149,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90vw;           /* Non 100%, così non arriva ai bordi */
-  max-width: 1200px;     /* Limite massimo */
-  margin: 24px auto 0 auto; /* Centra orizzontalmente, aggiungi spazio sopra */
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;            /* Rimuovi il margin-top qui! */
   padding: 0 40px;
   min-height: 56px;
   background: rgba(0,0,0,0.18);
   backdrop-filter: blur(4px);
   border-radius: 14px;
   box-sizing: border-box;
-  position: relative;
-  z-index: 10;
+  position: fixed;           /* Cambia da 'relative' a 'fixed' */
+  top: 10px;                 /* Distanza dal top della finestra */
+  left: 0;                   /* Allineato a sinistra */
+  right: 0;                  /* Allineato a destra */
+  z-index: 9999;             /* Stai sopra agli altri elementi */
 }
 
 .navbar-left {
@@ -195,6 +198,9 @@ body {
   vertical-align: middle;
   margin-right: 10px;
   margin-top: -2px; /* Per allineare meglio */
+}
+#info.container {
+  margin-top: 90px; /* oppure quanto basta per non sovrapporsi */
 }
 
 
