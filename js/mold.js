@@ -71,10 +71,10 @@ class Mold {
   }
   
   display() {
-    noStroke();
-    fill(255);
-    ellipse(this.x, this.y, this.r*2, this.r*2);
-    
+  noStroke();
+  fill(255); // oppure fill(255, 80); per una scia più leggera
+  ellipse(this.x, this.y, this.r*2, this.r*2);
+}
     // line(this.x, this.y, this.x + this.r*3*this.vx, this.y + this.r*3*this.vy);
     // fill(255, 0, 0);
     // ellipse(this.rSensorPos.x, this.rSensorPos.y, this.r*2, this.r*2);
