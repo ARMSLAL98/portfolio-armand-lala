@@ -99,6 +99,9 @@ body {
   -webkit-backdrop-filter: blur(4px);
   border: 1.5px solid rgba(255,255,255,0.22); /* opzionale effetto vetro */
 }
+.container * {
+  color: #fff !important;
+}
 
 .project-card img {
   display: block;
