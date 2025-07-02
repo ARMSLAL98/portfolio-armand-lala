@@ -27,13 +27,21 @@ img.full-height {
 
 /* --- CARD PROGETTO MODERNA --- */
 .project-card {
-  background: rgba(255,255,255,0.50); /* O anche meno tipo 0.55 */
+  background: rgba(255,255,255,0.50); /* trasparente */
   border-radius: 18px;
   box-shadow: 0 2px 12px rgba(30,40,60,0.07);
   transition: transform 0.18s, box-shadow 0.18s;
   margin-bottom: 28px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
+
 
 .project-card a {
   text-decoration: none;
@@ -94,16 +102,6 @@ body {
   border: 1.5px solid rgba(255,255,255,0.22); /* opzionale effetto vetro */
 }
 
-
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  /* ...altre regole che hai già possono restare sopra! */
-}
 .project-card a {
   width: 100%;
   display: flex;
