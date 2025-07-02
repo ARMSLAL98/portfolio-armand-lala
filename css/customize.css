@@ -102,15 +102,6 @@ body {
   border: 1.5px solid rgba(255,255,255,0.22); /* opzionale effetto vetro */
 }
 
-.project-card a {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  padding: 18px 8px 12px 8px;
-}
 .project-card img {
   display: block;
   margin: 0 auto;
