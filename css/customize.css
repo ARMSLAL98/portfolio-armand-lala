@@ -136,6 +136,16 @@ body {
   margin-bottom: 8px;
 }
 
+#logo-al {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  max-width: 100px; /* o quanto vuoi */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 
 
