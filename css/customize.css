@@ -149,16 +149,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Puoi scegliere: position: fixed o relative */
-  width: 100%;
-  padding: 0 32px;
-  margin-bottom: 10px;
-  margin-top: 8px;
-  min-height: 48px;
-  background: rgba(0,0,0,0.18); /* leggermente trasparente */
+  width: 90vw;           /* Non 100%, così non arriva ai bordi */
+  max-width: 1200px;     /* Limite massimo */
+  margin: 24px auto 0 auto; /* Centra orizzontalmente, aggiungi spazio sopra */
+  padding: 0 40px;
+  min-height: 56px;
+  background: rgba(0,0,0,0.18);
   backdrop-filter: blur(4px);
-  border-radius: 12px;
+  border-radius: 14px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-left {
@@ -168,7 +169,8 @@ body {
 
 .navbar-right {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 38px;   /* Spaziatura maggiore */
 }
 
 .navbar a {
@@ -177,9 +179,11 @@ body {
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 500;
   letter-spacing: 1.5px;
-  font-size: 1.05em;
-  padding: 8px 4px;
+  font-size: 1.08em;
+  padding: 8px 8px;
   transition: color 0.16s;
+  display: flex;
+  align-items: center;
 }
 
 .navbar a:hover {
@@ -189,8 +193,9 @@ body {
 .navbar-home svg {
   display: inline-block;
   vertical-align: middle;
+  margin-right: 10px;
+  margin-top: -2px; /* Per allineare meglio */
 }
-
 
 
 
