@@ -87,14 +87,16 @@ body {
 
 
 .container {
-  background: rgba(255,255,255,0.50);
+  background: rgba(255,255,255,0.65);
   border-radius: 18px;
   padding: 32px;
   margin-bottom: 36px;
   box-shadow: 0 3px 20px rgba(30,40,60,0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* per Safari */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255,255,255,0.22); /* opzionale effetto vetro */
 }
+
 
 
 .project-card {
