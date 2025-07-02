@@ -77,14 +77,11 @@ img.full-height {
   color: #3366ff; /* Cambia qui per altro colore */
 }
 
-/* Stile generale della pagina */
 body {
-  background: transparent !important;
   color: #161718;
   font-family: 'Raleway', Arial, sans-serif;
   line-height: 1.7;
 }
-
 
 .container {
   background: rgba(255,255,255,0.75);
