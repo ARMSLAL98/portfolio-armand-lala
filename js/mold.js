@@ -72,7 +72,7 @@ class Mold {
   
   display() {
     noStroke();
-    fill(255);
+    fill(255, 80);
     ellipse(this.x, this.y, this.r*2, this.r*2);
     
     // line(this.x, this.y, this.x + this.r*3*this.vx, this.y + this.r*3*this.vy);
