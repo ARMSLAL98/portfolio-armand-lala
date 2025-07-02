@@ -19,12 +19,13 @@ function setup() {
 
   // AGGIUNGI QUESTO BLOCCO ↓↓↓↓↓↓↓↓↓↓↓
   let c = document.querySelector('canvas');
-  c.style.position = 'fixed';
-  c.style.top = 0;
-  c.style.left = 0;
-  c.style.width = '100vw';
-  c.style.height = '100vh';
-  c.style.zIndex = '-1';
+c.style.position = 'fixed';
+c.style.top = 0;
+c.style.left = 0;
+c.style.width = '100vw';
+c.style.height = '100vh';
+c.style.zIndex = '-1';
+
   // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
   angleMode(DEGREES);
