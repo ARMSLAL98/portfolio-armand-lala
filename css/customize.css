@@ -87,12 +87,15 @@ body {
 
 
 .container {
-  background: rgba(255,255,255,0.70); /* 0.70 è la trasparenza, puoi cambiare! */
+  background: rgba(255,255,255,0.50);
   border-radius: 18px;
   padding: 32px;
   margin-bottom: 36px;
   box-shadow: 0 3px 20px rgba(30,40,60,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* per Safari */
 }
+
 
 .project-card {
   display: flex;
