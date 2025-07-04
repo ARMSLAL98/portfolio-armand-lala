@@ -49,24 +49,19 @@
     </div>
     <!-- Blocco 2: DESCRIZIONE -->
     <div class="glass-box">
-      <p>
-        This project is a programmatic interpretation of Sol LeWitt’s “Location of a Circle”, realized through p5.js. LeWitt’s original instructions, notoriously intricate and recursive, demand the construction of a circle using only geometric points derived from the structure of a square. As stated by LeWitt:
-“A circle whose radius is equal to half the distance between two points, the first point is found where two lines would cross if the first line were drawn from a point halfway between a point halfway between the center of the square and the upper right corner and the midpoint of the topside…”
-In my code, I first define the square and all its key vertices and midpoints within the draw() function. To translate LeWitt’s layered instructions, I repeatedly use a custom midpoint(p1, p2) function, which calculates the midpoint between two p5.Vector points. The construction then proceeds by creating further midpoints of midpoints, reflecting LeWitt’s recursive “halfway between a point halfway…” structure.
-Crucially, to find the specific points called for by the instructions, I make use of the function lineIntersection(p1, p2, p3, p4), which computes the intersection of two lines defined by pairs of points. This is how the two “special points” of the construction are found:
- the first at the intersection of the “first set” of lines, the second at the intersection of the “second set,” exactly as described in the original text.
-To determine the center of the final circle, I use the function circumcenter(A, B, C). This calculates the circumcenter of a triangle whose vertices are:
-the center of the square,
+      <p>The HYPNO SPIRAL code generates an animated spiral of circles, inspired by the Fibonacci pattern, using polar coordinates and smooth rotation for a hypnotic effect.
+At the top, two global variables are defined: t (a global time variable for animation) and rot (which controls the rotation of the entire spiral). In setup(), the canvas is set to the full window with a black background, and shapes are drawn without fill, only outlines.
+The main animation happens in draw(). Each frame, a semi-transparent black rectangle is drawn (fill(10, 60); rect(...)) to create a fading trail effect. The origin is moved to the center of the canvas with translate(). Then, the code uses push() and pop() to rotate the spiral by rot radians (rotate(rot); drawSpiral();). The variables t and rot are increased each frame, controlling both the pulsation and the spinning.
+The function drawSpiral() contains the main loop, where for each point (n) up to maxN, the code computes the angle (using the golden angle in radians and a slight sinusoidal oscillation) and a radius that grows like sqrt(n). These polar coordinates are converted to Cartesian (x, y), and each circle is drawn with a white outline whose thickness and diameter also oscillate in time, becoming smaller towards the outside.
+The result is a clean, dynamic spiral made up of gently pulsing white circles, slowly rotating against a black background, for an elegant “hypno-spiral” visual effect.
 
-
-a midpoint between the center and the upper left corner,
-
-
-and a further midpoint constructed between lines—matching LeWitt’s phrasing, “the center is located equidistant to three points…”
-All the geometric points and construction lines are visualized step-by-step, and a further function, drawPoint(pt, sz, col), is used to render each relevant point as a small circle on the canvas.
-A notable addition in this implementation is the interactivity: the point “MB,” representing the midpoint on the bottom edge, can be moved by the user along the square’s base. While LeWitt does not prescribe this, I believe it embraces his spirit of openness—leaving room for variation and the interpreter’s initiative.
-Overall, the code balances mathematical rigor and creative freedom, staying as faithful as possible to LeWitt’s detailed instructions, while acknowledging the ambiguities and liberties his conceptual art always allowed. The translation of the written score into code makes both the logic and the inherent interpretative space of LeWitt’s process visible and experiential.
-</p>
+The SUNFLOWER sketch also uses polar coordinates and the golden angle to create a spiral, as seen in the previous example.
+Here, the global variable n counts the number of steps, and each frame in draw() adds one circle at a position computed from
+angle = n * radians(137.5) and radius = 6 * sqrt(n).
+The (x, y) coordinates center each circle, and fill(40 + n % 215, 160, 200, 180) assigns a unique color to each.
+Unlike the previous sketch, this one does not animate or rotate the spiral: every circle stays fixed, and noLoop() halts the drawing when the spiral reaches the canvas edge.
+In summary, both codes use the same math, but this version builds a static, step-by-step sunflower spiral with changing colors and no motion.
+      </p>
     </div>
     <!-- Blocco 3: GALLERIA -->
     <div class="glass-box">
