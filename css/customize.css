@@ -441,48 +441,12 @@ body {
   .gallery-row img { width: 90vw; height: 100px; }
 }
 
-/* Dropdown container: centrato verticalmente */
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 38px;
-}
-
+/* Dropdown menu nella navbar - centrato sotto Projects e con animazione */
 .dropdown {
   position: relative;
-  display: flex;
-  align-items: center; /* allinea la voce PROJECTS */
+  display: inline-block;
 }
 
-/* Dropdown content: animazione slide/fade */
-.dropdown-content {
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.28s cubic-bezier(.53,1.54,.44,.99), transform 0.28s cubic-bezier(.53,1.54,.44,.99), visibility 0.28s;
-  position: absolute;
-  right: 0;
-  min-width: 230px;
-  background: rgba(30,40,60,0.94);
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(40,60,100,0.16);
-  z-index: 9999;
-  margin-top: 8px;
-  padding: 6px 0;
-  pointer-events: none;
-}
-
-/* Mostra dropdown al hover */
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* Allinea il testo PROJECTS verticalmente con il menu */
 .dropbtn {
   cursor: pointer;
   color: #fff;
@@ -495,10 +459,35 @@ body {
   transition: color 0.16s;
   display: flex;
   align-items: center;
-  height: 100%;    /* si allinea col resto della navbar */
+  height: 56px; /* Assicurati che sia uguale alla navbar per il centering */
 }
 
-/* Stile delle voci */
+/* Menu a tendina: centrato sotto il bottone */
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 12px) scaleY(0.97); /* leggero slide-down */
+  min-width: 230px;
+  background: rgba(30,40,60,0.94);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(40,60,100,0.16);
+  z-index: 9999;
+  padding: 6px 0;
+  transition: opacity 0.25s cubic-bezier(.7,.3,.18,1), transform 0.25s cubic-bezier(.7,.3,.18,1);
+}
+
+/* Mostra dropdown con animazione */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0) scaleY(1);
+}
+
 .dropdown-content a {
   color: #fff;
   padding: 10px 22px;
@@ -510,14 +499,15 @@ body {
   border-radius: 6px;
   transition: background 0.16s, color 0.16s;
 }
+
 .dropdown-content a:hover {
   background: #2396e2;
   color: #fff;
 }
 
-/* Mobile fix */
 @media (max-width: 700px) {
-  .dropdown-content { min-width: 92vw; right: auto; left: 0; }
+  .dropdown-content { min-width: 92vw; left: 50%; right: auto; transform: translate(-50%, 0); }
 }
+
 
 
