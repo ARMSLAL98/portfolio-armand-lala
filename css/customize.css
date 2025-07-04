@@ -306,15 +306,22 @@ body {
 
 .cover-row {
   display: flex;
-  align-items: flex-start;
   justify-content: center;
-  gap: 64px;
+  align-items: center;
+  gap: 54px; /* aumenta lo spazio tra immagine e icone */
   margin-top: 18px;
 }
 
+.cover-img-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
 .cover-img {
-  width: 520px;
-  height: 320px;
+  width: 340px;   /* aumenta la grandezza se vuoi */
+  height: 210px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 2px 14px rgba(60,60,80,0.10);
@@ -323,10 +330,12 @@ body {
 .cover-icons {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-left: 4px;
-  margin-top: 2px;
+  gap: 20px;
+  margin-left: 18px;
+  margin-top: 0;
+  align-items: flex-start;
 }
+
 .icon-btn {
   background: rgba(50,70,120,0.30);
   border-radius: 8px;
