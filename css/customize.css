@@ -414,25 +414,24 @@ body {
 .popup-arrow {
   position: absolute;
   top: 50%;
-  font-size: 3.6em;
+  transform: translateY(-50%);
+  font-size: 3.6em;      /* o quanto vuoi */
   color: #fff;
   background: none;
   border: none;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
   cursor: pointer;
-  user-select: none;
   z-index: 10001;
-  transform: translateY(-50%);
-  opacity: 0.85;
-  transition: opacity 0.18s;
+  padding: 0 18px;
+  user-select: none;
+  transition: color 0.16s;
+  font-family: inherit;   /* Così resta il font attuale, nessun riquadro */
 }
-#popup-prev { left: 24px; }
-#popup-next { right: 24px; }
-.popup-arrow:hover { opacity: 1; color: #a9cbf5; }
-
-
+#popup-prev { left: 12px; }
+#popup-next { right: 12px; }
+.popup-arrow:focus,
+.popup-arrow:hover {
+  color: #74d5ff;         /* Un tocco di effetto se vuoi */
+}
 
 @media (max-width: 600px) {
   .cover-img { width: 98vw; height: 150px; }
