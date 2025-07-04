@@ -317,12 +317,12 @@ body {
   width: 100%;
 }
 
-.cover-top {
-  width: 100%;
+.cover-top-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 18px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 22px;
 }
 
 .cover-title {
@@ -337,17 +337,19 @@ body {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .cover-img {
-  width: 60%;
-  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  width: 65%;
+  max-width: 650px;
   height: auto;
   border-radius: 18px;
   box-shadow: 0 2px 14px rgba(60,60,80,0.10);
-  margin: 0 auto;
 }
+
 
 
 .cover-icons {
