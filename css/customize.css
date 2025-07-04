@@ -320,7 +320,6 @@ body {
   box-shadow: 0 2px 14px rgba(60,60,80,0.10);
 }
 
-/* Icone sopra l’immagine */
 .cover-icons {
   display: flex;
   flex-direction: column;
@@ -349,7 +348,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Galleria */
 .gallery-row {
   display: flex;
   gap: 22px;
