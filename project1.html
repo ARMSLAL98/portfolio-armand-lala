@@ -84,19 +84,62 @@ Overall, this sketch combines randomization, interaction, and color theory to pr
 
   <!-- POPUP OVERLAY -->
 <div id="img-popup" style="display:none;position:fixed;z-index:10000;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.77);justify-content:center;align-items:center;">
+  <span id="popup-prev" class="popup-arrow" aria-label="Precedente">&lt;</span>
   <img id="img-popup-big" src="" style="max-width:90vw;max-height:85vh;border-radius:14px;box-shadow:0 6px 32px rgba(60,60,80,0.16);border:3px solid #fff;">
+  <span id="popup-next" class="popup-arrow" aria-label="Successiva">&gt;</span>
 </div>
+
 <script>
-  document.querySelectorAll('.gallery-img').forEach(img => {
-    img.style.cursor = "pointer";
-    img.onclick = function() {
-      document.getElementById('img-popup-big').src = img.src;
-      document.getElementById('img-popup').style.display = 'flex';
-    }
-  });
-  document.getElementById('img-popup').onclick = function() {
-    this.style.display = 'none';
+const images = Array.from(document.querySelectorAll('.gallery-img'));
+let currentIndex = 0;
+
+function showPopup(index) {
+  if(index < 0 || index >= images.length) return;
+  currentIndex = index;
+  document.getElementById('img-popup-big').src = images[currentIndex].src;
+  document.getElementById('img-popup').style.display = 'flex';
+}
+
+images.forEach((img, idx) => {
+  img.style.cursor = "pointer";
+  img.onclick = function(e) {
+    e.stopPropagation();
+    showPopup(idx);
   }
+});
+
+function closePopup() {
+  document.getElementById('img-popup').style.display = 'none';
+}
+
+document.getElementById('img-popup').onclick = closePopup;
+
+document.getElementById('popup-prev').onclick = function(e) {
+  e.stopPropagation();
+  showPopup((currentIndex - 1 + images.length) % images.length);
+};
+document.getElementById('popup-next').onclick = function(e) {
+  e.stopPropagation();
+  showPopup((currentIndex + 1) % images.length);
+};
+
+// Tastiera: ← (37), → (39), ESC (27)
+document.addEventListener('keydown', function(e) {
+  if(document.getElementById('img-popup').style.display === 'flex') {
+    if(e.key === 'ArrowLeft') {
+      showPopup((currentIndex - 1 + images.length) % images.length);
+      e.preventDefault();
+    }
+    if(e.key === 'ArrowRight') {
+      showPopup((currentIndex + 1) % images.length);
+      e.preventDefault();
+    }
+    if(e.key === 'Escape') {
+      closePopup();
+      e.preventDefault();
+    }
+  }
+});
 </script>
 
 </body>
