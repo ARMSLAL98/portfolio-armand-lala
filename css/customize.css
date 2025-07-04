@@ -411,6 +411,27 @@ body {
   box-shadow: 0 4px 22px rgba(80,110,220,0.17);
 }
 
+.popup-arrow {
+  position: absolute;
+  top: 50%;
+  background: rgba(30,40,60,0.25);
+  border: none;
+  color: #fff;
+  font-size: 2.5em;
+  padding: 0 20px;
+  cursor: pointer;
+  z-index: 10001;
+  border-radius: 16px;
+  transform: translateY(-50%);
+  opacity: 0.70;
+  transition: opacity 0.18s;
+  user-select: none;
+}
+#popup-prev { left: 40px; }
+#popup-next { right: 40px; }
+.popup-arrow:hover { opacity: 1; background: rgba(40,80,180,0.38); }
+
+
 @media (max-width: 600px) {
   .cover-img { width: 98vw; height: 150px; }
   .cover-row { flex-direction: column; gap: 18px; }
