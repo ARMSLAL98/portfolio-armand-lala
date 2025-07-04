@@ -305,27 +305,50 @@ body {
 }
 
 .cover-row {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 54px; /* aumenta lo spazio tra immagine e icone */
-  margin-top: 18px;
 }
 
 .cover-img-wrap {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex: 0 0 auto;
+  width: 100%;
+}
+
+.cover-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.cover-title {
+  font-size: 3em;
+  font-family: 'Raleway', Arial, sans-serif;
+  margin: 0;
+  color: #fff;
+  text-align: left;
+}
+
+.cover-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
 }
 
 .cover-img {
-  width: 780px;   /* aumenta la grandezza se vuoi */
-  height: 480px;
-  object-fit: cover;
+  width: 60%;
+  max-width: 600px;
+  height: auto;
   border-radius: 18px;
   box-shadow: 0 2px 14px rgba(60,60,80,0.10);
+  margin: 0 auto;
 }
+
 
 .cover-icons {
   display: flex;
