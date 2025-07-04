@@ -88,10 +88,11 @@ User interaction is seamless: moving the mouse horizontally alters the scaleX va
 
   <!-- POPUP OVERLAY -->
 <div id="img-popup" style="display:none;position:fixed;z-index:10000;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.77);justify-content:center;align-items:center;">
-  <button id="popup-prev" class="popup-arrow" aria-label="Precedente">&#8592;</button>
+  <span id="popup-prev" class="popup-arrow" aria-label="Precedente">&lt;</span>
   <img id="img-popup-big" src="" style="max-width:90vw;max-height:85vh;border-radius:14px;box-shadow:0 6px 32px rgba(60,60,80,0.16);border:3px solid #fff;">
-  <button id="popup-next" class="popup-arrow" aria-label="Successiva">&#8594;</button>
+  <span id="popup-next" class="popup-arrow" aria-label="Successiva">&gt;</span>
 </div>
+
 <script>
 const images = Array.from(document.querySelectorAll('.gallery-img'));
 let currentIndex = 0;
