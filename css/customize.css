@@ -308,13 +308,13 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 36px;
+  gap: 64px;
   margin-top: 18px;
 }
 
 .cover-img {
-  width: 260px;
-  height: 160px;
+  width: 520px;
+  height: 320px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 2px 14px rgba(60,60,80,0.10);
@@ -324,7 +324,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-left: 16px;
+  margin-left: 4px;
   margin-top: 2px;
 }
 .icon-btn {
@@ -367,5 +367,14 @@ body {
   transform: scale(1.04);
   box-shadow: 0 4px 22px rgba(80,110,220,0.17);
 }
+
+@media (max-width: 600px) {
+  .cover-img { width: 98vw; height: 150px; }
+  .cover-row { flex-direction: column; gap: 18px; }
+  .cover-icons { flex-direction: row; margin-left: 0; margin-top: 10px; gap: 12px;}
+  .glass-box { padding: 14vw 2vw; }
+  .gallery-row img { width: 90vw; height: 100px; }
+}
+
 
 
