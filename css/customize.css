@@ -320,8 +320,8 @@ body {
 }
 
 .cover-img {
-  width: 340px;   /* aumenta la grandezza se vuoi */
-  height: 210px;
+  width: 780px;   /* aumenta la grandezza se vuoi */
+  height: 480px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 2px 14px rgba(60,60,80,0.10);
