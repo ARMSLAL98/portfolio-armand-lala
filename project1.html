@@ -11,42 +11,52 @@
   <link rel="stylesheet" href="css/customize.css">
 </head>
 <body>
+  <!-- NAVBAR START -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="index.html" class="navbar-home" title="Home">
+        <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+          <path d="M3 11l9-9 9 9h-2v8a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4h-2v4a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-8H3z" stroke="white" stroke-width="2" fill="none"/>
+        </svg>
+      </a>
+    </div>
+    <div class="navbar-right">
+      <a href="#about">ABOUT</a>
+      <a href="#contacts">CONTACTS</a>
+      <a href="#projects">PROJECTS</a>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
 
-<!-- NAVBAR START -->
-<nav class="navbar">
-  <div class="navbar-left">
-    <a href="index.html" class="navbar-home" title="Home">
-      <svg width="24" height="24" fill="white" viewBox="0 0 24 24" style="vertical-align: middle;">
-        <path d="M3 11l9-9 9 9h-2v8a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4h-2v4a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-8H3z" stroke="white" stroke-width="2" fill="none"/>
-      </svg>
-    </a>
+  <div class="container project-top" style="margin-bottom: 36px;">
+    <h1 class="center">Blue Project</h1>
+    <div class="glass-row">
+      <!-- IMMAGINE GRANDE, CON ICONE IN ALTO A DESTRA -->
+      <div class="project-img-box">
+        <img src="images/blue.png" alt="Blue Project" class="big-project-img">
+        <div class="project-icons">
+          <!-- Icona JS (link a progetto JS) -->
+          <a href="LINK_AL_JS" target="_blank" title="Vai al progetto JS" class="icon-btn">
+            <span class="icon-js">JS*</span>
+          </a>
+          <!-- Icona PDF -->
+          <a href="docs/blue-project.pdf" target="_blank" download title="Scarica PDF" class="icon-btn">
+            <!-- icona documento stilizzata SVG -->
+            <svg height="20" width="20" viewBox="0 0 20 20" fill="none" stroke="white" stroke-width="2">
+              <rect x="4" y="2" width="12" height="16" rx="2" fill="none"/>
+              <path d="M8 6h4M8 10h4M8 14h4"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- TESTO SOTTO, CON SFONDO GLASS -->
+    <div class="glass-desc">
+      <p class="center">
+        Qui puoi scrivere una descrizione dettagliata del Blue Project.<br>
+        Aggiungi testo, immagini, quello che vuoi!
+      </p>
+    </div>
   </div>
-  <div class="navbar-right">
-    <a href="#about">ABOUT</a>
-    <a href="#contacts">CONTACTS</a>
-    <a href="#projects">PROJECTS</a>
-  </div>
-</nav>
-<!-- NAVBAR END -->
-
-<!-- ANIMATED BACKGROUND (uguale alla home) -->
-<script src="js/p5.js"></script>
-<script src="js/p5.sound.min.js"></script>
-<script src="js/mold.js"></script>
-<script src="js/sketch.js"></script>
-
-<!-- MAIN PROJECT CONTAINER (stile .container) -->
-<div class="container center" style="margin-top:100px; min-height: 400px; max-width: 760px;">
-  <h2 style="margin-bottom:24px;">Blue Project</h2>
-  <div class="project-card" style="margin: 0 auto; max-width: 360px;">
-    <img src="images/blue.png" alt="Blue Project" style="max-width:180px; border-radius:10px; margin-bottom:18px;">
-    <h5>Blue Project</h5>
-    <p style="margin:18px 0 0 0; font-size:1.09em;">
-      Qui puoi scrivere una descrizione dettagliata del Blue Project.<br>
-      Aggiungi testo, immagini, quello che vuoi!
-    </p>
-  </div>
-</div>
-
 </body>
 </html>
