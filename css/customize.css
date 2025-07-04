@@ -511,5 +511,18 @@ body {
   .dropdown-content { min-width: 92vw; left: 50%; right: auto; transform: translate(-50%, 0); }
 }
 
+@media (max-width: 700px) {
+  .glass-box {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 18px !important;
+  }
+  .glass-box h1.cover-title {
+    text-align: center !important;
+    width: 100%;
+  }
+}
+
 
 
