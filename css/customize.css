@@ -306,6 +306,61 @@ body {
   position: relative;
 }
 
+.about-cover-flex {
+  display: flex;
+  align-items: center;
+  gap: 68px;
+  min-height: 300px;
+  justify-content: flex-start;
+}
+
+.about-svg-wrap {
+  flex: 0 0 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-svg-big {
+  width: 280px;   /* SVG molto grande! */
+  height: 280px;
+  max-width: 40vw;
+  max-height: 40vw;
+  border-radius: 18px;
+  background: rgba(30,30,60,0.08);
+  box-shadow: 0 2px 18px rgba(30,40,60,0.15);
+}
+
+.about-cover-text {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* Responsive: colonna e centrato su mobile */
+@media (max-width: 900px) {
+  .about-cover-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 22px !important;
+    min-height: unset;
+    text-align: center;
+  }
+  .about-cover-text {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .about-svg-big {
+    width: 54vw;
+    height: 54vw;
+    max-width: 340px;
+    max-height: 340px;
+  }
+}
+
 .cover-head {
   width: 100%;
   display: flex;
