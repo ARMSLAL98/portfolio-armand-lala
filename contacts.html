@@ -9,23 +9,11 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/customize.css">
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: transparent;
-    }
     .main-center-container {
-      flex: 1;
+      min-height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 80vh;
     }
     .glass-box.contacts-cover {
       display: flex;
@@ -75,7 +63,6 @@
     .contact-icon-btn:active svg {
       stroke: #70caff;
     }
-    /* Popup Copiato */
     #copied-popup {
       position: fixed;
       left: 50%;
@@ -117,18 +104,42 @@
 </head>
 <body>
   <!-- NAVBAR START -->
-  <!-- ... la tua navbar invariata ... -->
-
+  <!-- (Copia e incolla qui la TUA NAVBAR, esattamente come già hai!) -->
   <nav class="navbar">
-    <!-- ... (copiala identica da prima, non cambia) ... -->
+    <div class="navbar-left">
+      <a href="index.html" class="navbar-home" title="Home">
+        <svg width="24" height="24" fill="white" viewBox="0 0 24 24" style="vertical-align: middle;">
+          <path d="M3 11l9-9 9 9h-2v8a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4h-2v4a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-8H3z" stroke="white" stroke-width="2" fill="none"/>
+        </svg>
+      </a>
+    </div>
+    <div class="navbar-right">
+      <a href="about.html">ABOUT</a>
+      <a href="contacts.html">CONTACTS</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">PROJECTS</a>
+        <div class="dropdown-content">
+          <a href="project1.html">OPULENT TILING</a>
+          <a href="project2.html">▲ ◼</a>
+          <a href="project3.html">MAZE</a>
+          <a href="project4.html">▲ ◼ ⏺</a>
+          <a href="project5.html">URBAN MYCELIUM</a>
+          <a href="project6.html">HYPNO SPIRAL</a>
+          <a href="project7.html">SUNFLOWER</a>
+          <a href="project8.html">LOCATION OF A CIRCLE</a>
+          <a href="project9.html">DYNAMIC QUAD-SPLIT METER</a>
+        </div>
+      </div>
+    </div>
   </nav>
   <!-- NAVBAR END -->
 
+  <!-- CENTRO PAGINA -->
   <div class="main-center-container">
     <div class="glass-box contacts-cover">
       <!-- Instagram -->
       <a class="contact-icon-btn" href="https://www.instagram.com/charlie_ff/" target="_blank" title="Instagram">
-        <!-- Instagram SVG (outline, elegante) -->
+        <!-- Instagram SVG -->
         <svg viewBox="0 0 48 48">
           <rect x="9" y="9" width="30" height="30" rx="8" />
           <circle cx="24" cy="24" r="8.2" />
@@ -137,29 +148,32 @@
       </a>
       <!-- Email -->
       <button class="contact-icon-btn" id="copy-mail-btn" title="Copia indirizzo email">
-        <!-- Mail SVG (outline) -->
+        <!-- Mail SVG -->
         <svg viewBox="0 0 48 48">
           <rect x="8" y="13" width="32" height="22" rx="6"/>
           <polyline points="8,13 24,28 40,13"/>
         </svg>
       </button>
     </div>
-    <!-- Popup copiato -->
+    <!-- Popup Copiato -->
     <div id="copied-popup">Indirizzo e-mail copiato!</div>
   </div>
 
-  <!-- FOOTER opzionale -->
   <div class="row one-bottom center">
     <p>©ARMAND LALA 2025</p>
   </div>
 
+  <!-- Scripts p5.js + tuoi js per lo sfondo! -->
+  <script src="js/p5.js"></script>
+  <script src="js/p5.sound.min.js"></script>
+  <script src="js/mold.js"></script>
+  <script src="js/sketch.js"></script>
   <script>
-    // Copia la mail: Sostituisci QUI la tua mail!
+    // Sostituisci qui con la tua email tra virgolette!
     const yourEmail = "armand.lala0@gmail.com";
     const btn = document.getElementById("copy-mail-btn");
     const popup = document.getElementById("copied-popup");
     btn.addEventListener("click", () => {
-      // Copia email
       navigator.clipboard.writeText(yourEmail).then(() => {
         popup.classList.add("visible");
         setTimeout(() => {
