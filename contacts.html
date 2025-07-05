@@ -1,84 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta charset="utf-8"> 
-  <title>About | A L </title>
+  <title>Contacts | A L</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/customize.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+    }
+    .main-center-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+    }
+    .glass-box.contacts-cover {
+      display: flex;
+      flex-direction: row;
+      gap: 58px;
+      align-items: center;
+      justify-content: center;
+      padding: 54px 46px;
+      background: rgba(255,255,255,0.31);
+      border-radius: 28px;
+      box-shadow: 0 3px 32px 6px rgba(30,40,60,0.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(255,255,255,0.13);
+      margin: 0 auto;
+      min-width: 350px;
+    }
+    .contact-icon-btn {
+      width: 84px;
+      height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 24px;
+      background: rgba(30,40,60,0.12);
+      box-shadow: 0 2px 16px rgba(30,40,60,0.13);
+      cursor: pointer;
+      transition: transform 0.14s, background 0.15s;
+      border: none;
+      outline: none;
+      position: relative;
+    }
+    .contact-icon-btn:hover {
+      transform: scale(1.08) translateY(-2px);
+      background: rgba(80,140,255,0.20);
+    }
+    .contact-icon-btn svg {
+      width: 38px;
+      height: 38px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2.3px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.15s;
+    }
+    .contact-icon-btn:active svg {
+      stroke: #70caff;
+    }
+    /* Popup Copiato */
+    #copied-popup {
+      position: fixed;
+      left: 50%;
+      bottom: 42px;
+      transform: translateX(-50%);
+      background: rgba(30, 40, 60, 0.89);
+      color: #fff;
+      font-size: 1.13em;
+      padding: 13px 22px;
+      border-radius: 14px;
+      box-shadow: 0 3px 20px rgba(40,60,110,0.19);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transition: opacity 0.28s;
+      letter-spacing: 1px;
+    }
+    #copied-popup.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    @media (max-width: 600px) {
+      .glass-box.contacts-cover {
+        flex-direction: column;
+        gap: 34px;
+        min-width: unset;
+        padding: 34px 6vw;
+      }
+      .contact-icon-btn {
+        width: 62px;
+        height: 62px;
+      }
+      .contact-icon-btn svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  </style>
 </head>
 <body>
-   <!-- NAVBAR START -->
-<nav class="navbar">
-  <div class="navbar-left">
-    <a href="index.html" class="navbar-home" title="Home">
-      <!-- Casetta in SVG: puoi cambiare la dimensione (width/height) -->
-      <svg width="24" height="24" fill="white" viewBox="0 0 24 24" style="vertical-align: middle;">
-        <path d="M3 11l9-9 9 9h-2v8a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4h-2v4a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-8H3z" stroke="white" stroke-width="2" fill="none"/>
-      </svg>
-    </a>
-  </div>
- <div class="navbar-right">
-  <a href="about.html">ABOUT</a>
-  <a href="contacts.html">CONTACTS</a>
-  <div class="dropdown">
-  <a href="#" class="dropbtn">PROJECTS</a>
-  <div class="dropdown-content">
-    <a href="project1.html">OPULENT TILING</a>
-    <a href="project2.html">▲ ◼</a>
-    <a href="project3.html">MAZE</a>
-    <a href="project4.html">▲ ◼ ⏺</a>
-    <a href="project5.html">URBAN MYCELIUM</a>
-    <a href="project6.html">HYPNO SPIRAL</a>
-    <a href="project7.html">SUNFLOWER</a>
-    <a href="project8.html">LOCATION OF A CIRCLE</a>
-    <a href="project9.html">DYNAMIC QUAD-SPLIT METER</a>
-  </div>
-</div>
+  <!-- NAVBAR START -->
+  <!-- ... la tua navbar invariata ... -->
 
-</div>
+  <nav class="navbar">
+    <!-- ... (copiala identica da prima, non cambia) ... -->
+  </nav>
+  <!-- NAVBAR END -->
 
-</nav>
-<!-- NAVBAR END -->
-  
-  <div class="project-glass-wrapper">
-    <!-- COPERTINA -->
-    <div class="glass-box">
-      <div class="cover-head">
-        <h1 class="cover-title">ABOUT</h1>
-      </div>
-      <!-- Se vuoi puoi mettere un'immagine qui sotto, oppure toglila -->
-      <!-- <img src="images/about-cover.png" alt="About Cover" class="cover-img"> -->
+  <div class="main-center-container">
+    <div class="glass-box contacts-cover">
+      <!-- Instagram -->
+      <a class="contact-icon-btn" href="https://www.instagram.com/charlie_ff/" target="_blank" title="Instagram">
+        <!-- Instagram SVG (outline, elegante) -->
+        <svg viewBox="0 0 48 48">
+          <rect x="9" y="9" width="30" height="30" rx="8" />
+          <circle cx="24" cy="24" r="8.2" />
+          <circle cx="33.2" cy="14.8" r="2.2" />
+        </svg>
+      </a>
+      <!-- Email -->
+      <button class="contact-icon-btn" id="copy-mail-btn" title="Copia indirizzo email">
+        <!-- Mail SVG (outline) -->
+        <svg viewBox="0 0 48 48">
+          <rect x="8" y="13" width="32" height="22" rx="6"/>
+          <polyline points="8,13 24,28 40,13"/>
+        </svg>
+      </button>
     </div>
-    <!-- DESCRIZIONE -->
-    <div class="glass-box">
-      <p style="font-size:1.36em;">
-        <!-- Sostituisci qui sotto con il testo di presentazione che vuoi -->
-        Benvenutə su <b>Opulent Tiling</b>! Questo sito raccoglie progetti, esperimenti visivi e ricerche legate a grafica generativa, programmazione creativa, e design computazionale.  
-        <br><br>
-        Sono <b>Armand Lala</b> e questo è il mio spazio per esplorare algoritmi, pattern visivi e contaminazioni tra arte digitale, coding e geometria.  
-        <br><br>
-        <b>Su questo sito trovi:</b>
-        <ul style="text-align:left; max-width:560px; margin:20px auto 0 auto;">
-          <li>Sketch generativi scritti in p5.js</li>
-          <li>Analisi e commenti sui processi creativi</li>
-          <li>Piccole gallerie di immagini/gif</li>
-          <li>PDF e materiali scaricabili</li>
-          <li>Link utili e contatti</li>
-        </ul>
-        <br>
-        Se vuoi saperne di più o collaborare, <b>scrivimi!</b>
-      </p>
-    </div>
+    <!-- Popup copiato -->
+    <div id="copied-popup">Indirizzo e-mail copiato!</div>
   </div>
-  <!-- Al fondo di about.html -->
-<script src="js/p5.js"></script>
-<script src="js/p5.sound.min.js"></script>
-<script src="js/mold.js"></script>
-<script src="js/sketch.js"></script>
 
+  <!-- FOOTER opzionale -->
+  <div class="row one-bottom center">
+    <p>©ARMAND LALA 2025</p>
+  </div>
+
+  <script>
+    // Copia la mail: Sostituisci QUI la tua mail!
+    const yourEmail = "armand.lala0@gmail.com";
+    const btn = document.getElementById("copy-mail-btn");
+    const popup = document.getElementById("copied-popup");
+    btn.addEventListener("click", () => {
+      // Copia email
+      navigator.clipboard.writeText(yourEmail).then(() => {
+        popup.classList.add("visible");
+        setTimeout(() => {
+          popup.classList.remove("visible");
+        }, 1700);
+      });
+    });
+  </script>
 </body>
 </html>
