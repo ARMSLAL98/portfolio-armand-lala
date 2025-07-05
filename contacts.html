@@ -32,37 +32,42 @@
       min-width: 350px;
     }
     .contact-icon-btn {
-      width: 84px;
-      height: 84px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 24px;
-      background: rgba(30,40,60,0.35);
-      box-shadow: 0 2px 16px rgba(30,40,60,0.13);
-      cursor: pointer;
-      transition: transform 0.14s, background 0.15s;
-      border: none;
-      outline: none;
-      position: relative;
-    }
-    .contact-icon-btn:hover {
-      transform: scale(1.08) translateY(-2px);
-      background: rgba(80,140,255,0.20);
-    }
-    .contact-icon-btn svg {
-      width: 38px;
-      height: 38px;
-      fill: none;
-      stroke: #fff;
-      stroke-width: 2.3px;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: stroke 0.15s;
-    }
-    .contact-icon-btn:active svg {
-      stroke: #70caff;
-    }
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background: rgba(30,40,60,0.41); /* meno trasparente */
+  box-shadow: 0 2px 16px rgba(30,40,60,0.13);
+  cursor: pointer;
+  transition: transform 0.14s, background 0.15s;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.contact-icon-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+  background: rgba(80,140,255,0.22);
+}
+
+.contact-icon-btn svg {
+  width: 50px;   /* più grande */
+  height: 50px;  /* più grande */
+  display: block;
+  margin: 0 auto;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-icon-btn:active svg {
+  stroke: #70caff;
+}
+
     #copied-popup {
       position: fixed;
       left: 50%;
